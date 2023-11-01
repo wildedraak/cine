@@ -22,3 +22,16 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Configurar los archivos que se manejarán con LF (Unix-style)
+* text=auto
+
+# Configurar los archivos que se manejarán con CRLF (Windows-style)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.properties text eol=crlf
+
+# Configurar los archivos que se manejarán con LF (Unix-style)
+*.java text eol=lf
+*.xml text eol=lf
+
