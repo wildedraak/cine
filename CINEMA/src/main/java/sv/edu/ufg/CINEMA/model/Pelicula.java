@@ -24,6 +24,11 @@ public class Pelicula {
 
     @ManyToOne
     @JoinColumn(name = "director_id", referencedColumnName = "id")
+    //@JoinColumn(name = "director_id",referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "FK_PELICULA_DIRECTOR"))
     private Director director;
+
+    @ManyToOne
+    @JoinColumn(name = "pais_id", referencedColumnName = "id")
+    private Pais pais;
 
 }

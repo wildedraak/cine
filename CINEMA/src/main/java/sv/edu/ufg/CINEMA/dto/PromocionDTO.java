@@ -1,12 +1,10 @@
 package sv.edu.ufg.CINEMA.dto;
 
-import lombok.*;
-import sv.edu.ufg.CINEMA.model.Director;
-
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotNull;
-import sv.edu.ufg.CINEMA.repo.IGenericRepo;
+import lombok.*;
+import sv.edu.ufg.CINEMA.model.Pelicula;
 
 @Data
 @AllArgsConstructor
@@ -14,20 +12,16 @@ import sv.edu.ufg.CINEMA.repo.IGenericRepo;
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class PeliculaDTO {
-
+public class PromocionDTO {
     @EqualsAndHashCode.Include
     private Integer id;
 
     @NotNull
-    private String titulo;
-
+    private String nombre;
     @NotNull
-    private int anoLanzamiento;
-
+    private String descripcion;
     @NotNull
-    private DirectorDTO director;
+    private double descuento;
     @NotNull
-    private PaisDTO pais;
-
+    private Pelicula pelicula;
 }
